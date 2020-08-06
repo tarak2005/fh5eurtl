@@ -10,7 +10,7 @@ class Box {
     this.body=Bodies.rectangle(x,y,width,height,options)
     this.width = width;
     this.height= height;
-    
+    this.color=color(100,300,200);
     
     World.add(world, this.body);
     }
@@ -20,7 +20,7 @@ class Box {
         if(this.body.speed<3){
             var pos= this.body.position;
             rectMode(CENTER);
-            fill(225);
+            fill(this.color);
             rect(pos.x,pos.y,this.width,this.height);
       
         }

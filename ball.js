@@ -10,6 +10,8 @@ class Ball {
     this.body=Bodies.rectangle(x,y,width,height,options)
     this.width = width;
     this.height= height;
+    this.color=color(random(0,255), random(0,255), random (0,255))
+
     
     
     World.add(world, this.body);
@@ -18,7 +20,8 @@ class Ball {
     display(){
         var pos= this.body.position;
         rectMode(CENTER);
-        fill(225);
+        fill(this.color);
+        
         rect(pos.x,pos.y,this.width,this.height);
     }
 
